@@ -1,0 +1,59 @@
+Project 1 — SOC Home Lab (Foundation)
+
+Goal: Build a functional SOC environment to ingest logs and generate alerts.
+Skills demonstrated: SIEM config, endpoint logging, log parsing, Sysmon tuning, understanding of log flows.
+Tools: Wazuh/Elastic SIEM, Windows + Sysmon, Linux logging.
+Impressiveness: Shows you can create and maintain a mini-SOC environment.
+Deliverable: soc-lab/README.md, config files, sample alert screenshots.
+
+Project 2 — Incident Response Reports (Core)
+
+Goal: Demonstrate investigation and documentation of real incidents.
+Skills demonstrated: Log analysis, correlation, timelines, decision-making, triage.
+Tools: SIEM, log queries, scripts.
+Impressiveness: Polished, realistic reports simulate professional SOC work.
+Deliverable: 3–4 IR reports in incident-reports/ folder.
+
+Examples of scenarios:
+
+Brute-force authentication attempts
+
+Malware execution (benign test)
+
+Living-off-the-land PowerShell abuse
+
+Optional: suspicious outbound network connection
+
+Key: Include your thought process and limitations.
+
+Project 3 — Detection Engineering (Supporting Signal)
+
+Goal: Create practical alerting rules for the lab environment.
+Skills demonstrated: Detection logic, tuning, false-positive management, MITRE mapping.
+Tools: SIEM rules, log queries, Sysmon configs.
+Impressiveness: Shows analytical judgment beyond rote implementation.
+Deliverable: 5–7 detection rules with documentation in detections/ folder.
+
+Project 4 — Threat Hunting (Differentiator)
+
+Goal: Proactively find anomalies or threats based on hypotheses.
+Skills demonstrated: Analytical thinking, pattern recognition, investigative process.
+Tools: SIEM queries, scripts, logs.
+Impressiveness: Rare at intern level; shows you understand the mindset of a professional analyst.
+Deliverable: 2–3 threat hunts in threat-hunting/ folder. Include negative results and reasoning.
+
+Project 5 — Automation Scripts (Optional but Valuable)
+
+Goal: Reduce repetitive work and enrich alerts.
+Skills demonstrated: Scripting, automation, operational efficiency.
+Tools: Python, Bash, PowerShell (small scripts).
+Deliverable: 1–2 scripts in scripts/ folder with usage examples.
+
+Project 6 — Labs / Training (Optional)
+
+Goal: Support your IR and detection projects with controlled practice.
+Skills demonstrated: Hands-on learning, understanding behaviors, correlation with detections.
+Tools: BTLO, HTB Academy, THM blue-team labs.
+Deliverable: 3–5 documented labs in labs/ folder. Focus on lessons learned and translation into SOC artifacts.
+
+Important: Labs should never dominate your portfolio — they are evidence, not main content.
