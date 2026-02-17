@@ -1,0 +1,25 @@
+
+!-- Local rules -->
+<!-- Modify it at your will. --> <!-- Copyright (C) 2015, Wazuh Inc. -->
+<!-- Example -->
+<group name="local, syslog, sshd, ">
+<!--
+Dec 10 01:02:02 host sshd [1234]: Failed none for root from 1.1.1.1 port 1066 -->
+<rule id="100001" level="5">
+    <if_sid>5716</if_sid>
+    <srcip>1.1.1.1</srcip>
+    <description>sshd: authentication failed from IP 1.1.1.1.</description>
+    <group>authentication_failed, pci_dss_10.2.4,pci_dss_10.2.5,</group>
+</rule>
+</group>
+<group name="custom_detection, sysmon, ">
+    <rule id="100001" level="10">
+        <if_sid>61603</if_sid>
+        <field name="win.eventdata. ParentImage">(?i) powershell.exe</field>
+        <field name="win.eventdata. Image">(?i) cmd.exe</field> 
+        <description>Sysmon: PowerShell spawning cmd.exe</description>
+        <mitre>
+            <id>T1059</id>
+        </mitre>
+    </rule>
+</group>
