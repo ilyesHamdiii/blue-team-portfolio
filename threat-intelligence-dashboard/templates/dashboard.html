@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Threat Intelligence Dashboard</title>
+  </head>
+  <body>
+    <h1>Threat Intelligence Dashboard</h1>
+
+    <h2>Top IPs</h2>
+    <ul id="ips"></ul>
+
+    <h2>Search</h2>
+    <input id="q" placeholder="IP / user / command" />
+    <button onclick="search()">Search</button>
+
+    <ul id="results"></ul>
+
+    <script>
+      async function loadIPs() {
+        const res = await fetch("/api/top-ips");
+        const data = await res.json();
+
+        const list = document.getElementById("ips");
+        list.innerHTML = "";
+
+        data.forEach((row) => {
+          const li = document.createElement("li");
+          li.textContent = row[0] + " → " + row[1];
+          list.appendChild(li);
+        });
+      }
+
+      async function search() {
+        const q = document.getElementById("q").value;
+
+        const res = await fetch("/api/search?q=" + q);
+        const data = await res.json();
+
+        const list = document.getElementById("results");
+        list.innerHTML = "";
+
+        data.forEach((row) => {
+          const li = document.createElement("li");
+          li.textContent = JSON.stringify(row);
+          list.appendChild(li);
+        });
+      }
+
+      loadIPs();
+    </script>
+  </body>
+</html>
